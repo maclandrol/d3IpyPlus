@@ -73,8 +73,8 @@ def to_js(indata):
 
 class PyD3Plus(object):
 
-    JS_LIBS = ['http://www.d3plus.org/js/d3.js',
-               'http://www.d3plus.org/js/d3plus.js']
+    JS_LIBS = ['//d3plus.org/js/d3.js',
+               '//d3plus.org/js/d3plus.js']
 
     def __init__(self, container_id='', height=400, width=500, **kwargs):
         """PyD3Plus is the Base class that defines all global visualization parameters.
@@ -426,9 +426,9 @@ class _GeoMap(PyD3Plus):
         self.width = kwargs.get('width', 300)
         self.css = ""
         self.js = ""
-        self.JS_LIBS = ['http://www.d3plus.org/js/d3.js',
-                        'http://www.d3plus.org/js/topojson.js',
-                        'http://www.d3plus.org/js/d3plus.js']
+        self.JS_LIBS = ['//d3plus.org/js/d3.js',
+                        '//d3plus.org/js/topojson.js',
+                        '//d3plus.org/js/d3plus.js']
         self.id = id
         self.value = value
         self.text = text or self.id
@@ -509,7 +509,7 @@ class _GeoMap2(PyD3Plus):
         self.tooltip = tooltip or self.value
         if isinstance(self.tooltip, str):
             self.tooltip = [self.tooltip]
-        self.coords = coords or "http://d3plus.org/topojson/countries.json"
+        self.coords = coords or "https://d3plus.org/topojson/countries.json"
         self.title = title
         self.scalepos = scalepos
 
