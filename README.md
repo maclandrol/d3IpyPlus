@@ -4,8 +4,7 @@ This repository is an experiment trying to incorporate D3 into IPython Notebook 
 
 ### Why ?
 
-Because I find  IPython Notebook really convenient, and I would like to have nice interactive D3 plots. 
-Since the notebook support markdown, HTML (through ```IPython.core.display```) in addition to python/julia/R type cells, it is suitable for writing a complete blog post or a web-oriented scientific essay with only little post-editing needed. Therefore, it would be nice to have a way to automatically incorporate interactive graphs by writing python code. There have been several attempts to perfom such task :
+Because IPython Notebook is really convenient. In fact, since the notebook support markdown, HTML (through ```IPython.core.display```) in addition to python/julia/R type cells, it is suitable for writing a complete blog post or a web-oriented scientific essay with only little post-editing needed. Therefore, it would be nice to have a way to automatically incorporate interactive graphs in it, by writing python code. There are actually ways to perfom such task :
 
 - [d3py](https://github.com/mikedewar/d3py)
 - [vincent](https://github.com/wrobstory/vincent/)
@@ -17,9 +16,9 @@ Since the notebook support markdown, HTML (through ```IPython.core.display```) i
 - [Bokeh](https://bokeh.pydata.org/en/latest/). 
 - etc
 
-All of them are pretty good, and honestly if you are reading this, you should try one of them instead. However, I like simplicity and full control over the packages I used, and more importantly, I like writing useless stuffs. 
+All of them are pretty good, and if you are reading this, you have probably already heard of them. Truthfully, you should try either [Altair](https://github.com/altair-viz/altair_notebooks) or [holoviews](https://holoviews.org), if you are looking for a well maintained package that will prove useful in the long term.
 
-All visualizations are based on [D3plus](https://d3plus.org) which has a nice API, and is much easier to work with than __d3js__. The code is inspired from https://github.com/cid-harvard/visualization-notebook-templates. 
+D3IpyPlus's plots are based on [D3plus](https://d3plus.org) which has a nice API, and is much easier to work with than __d3js__. The main idea was inspired from https://github.com/cid-harvard/visualization-notebook-templates. 
 
 
 ### Basic ScatterPlot Example
@@ -27,6 +26,8 @@ All visualizations are based on [D3plus](https://d3plus.org) which has a nice AP
 Don't forget that this will only works in Ipython notebook.
 
 ```python
+from D3IpyPlus import ScatterPlot
+
 sample_data = [
     {"value": 100, "weight": .45, "type": "alpha"},
     {"value": 70, "weight": .60, "type": "beta"},
@@ -34,12 +35,14 @@ sample_data = [
     {"value": 15, "weight": .1, "type": "delta"}
  ]
 
+# you can pass a container_id parameter, that will correspond to the id of the div to which your plot will be attached
+# Alternatively, a unique div id will be automatically generated if the argument is missing.
 scplot = ScatterPlot(x='value', y='weight', id='type', width=600, size=10)
-# plot data
+# The following will display the plot inside the notebook
 scplot.draw(sample_data)
-# dump html corresponding to plot
+# You can also dump html source corresponding to the plot
 print(scplot.dump_html(sample_data))
-#  will output the following html code
+# which will output the following html
 ```
 ```html
     <script src='http://www.d3plus.org/js/d3.js' type='text/javascript'></script>
