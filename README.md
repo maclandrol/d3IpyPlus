@@ -36,7 +36,8 @@ sample_data = [
     {"value": 15, "weight": .1, "type": "delta"}
  ]
 
-# you can pass a container_id parameter, that will correspond to the id of the div to which your plot will be attached
+# you can pass a container_id parameter, that will correspond to 
+# the id of the div to which your plot will be attached
 # Alternatively, a unique div id will be automatically generated if the argument is missing.
 scplot = ScatterPlot(x='value', y='weight', id='type', width=600, size=10)
 # The following will display the plot inside the notebook
