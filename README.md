@@ -1,4 +1,5 @@
 ## D3IpyPlus
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/maclandrol/d3IpyPlus/master?filepath=example%2Fd3ipyplus_example.ipynb)
 
 This repository is an experiment trying to incorporate D3 into IPython Notebook (Jupyter). The main objective is to take advantage of Jupyter's interface which enables manipulation of the DOM, to build interactive, JavaScript-powered plots. 
 
@@ -74,7 +75,7 @@ print(scplot.dump_html(sample_data))
 
 ### Detailed examples
 
-Detailed examples are available in the [example](/example) folder. A Binder link is also available if you want a live version (click on the badge)
+Detailed examples are available in the [example](/example) folder. A Binder link is also available if you want a live version (click on the badge) [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/maclandrol/d3IpyPlus/master?filepath=example%2Fd3ipyplus_example.ipynb)
 
 
 
