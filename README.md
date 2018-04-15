@@ -5,7 +5,7 @@ This repository is an experiment trying to incorporate D3 into IPython Notebook 
 
 ### Why ?
 
-Because IPython Notebook is really convenient. In fact, since the notebook support markdown, HTML (through ```IPython.core.display```) in addition to python/julia/R type cells, it is suitable for writing a complete blog post or a web-oriented scientific essay with only little post-editing needed. Therefore, it would be nice to have a way to automatically incorporate interactive graphs in it, by writing python code. There are actually ways to perfom such task :
+Because IPython Notebook is really convenient. In fact, since the notebook supports markdown, HTML (through ```IPython.core.display```) in addition to python/julia/R type cells, it is suitable for writing a complete blog post or a web-oriented scientific essay with only little post-editing needed. Therefore, it would be nice to have a way to automatically incorporate interactive graphs in it, by writing python code. There are actually ways to perfom such task :
 
 - [d3py](https://github.com/mikedewar/d3py)
 - [vincent](https://github.com/wrobstory/vincent/)
