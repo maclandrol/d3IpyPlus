@@ -54,7 +54,7 @@ def to_js(indata):
     """Convert a python type to javascript (represented as a string)"""
     if indata is None:
         return ""
-    if isinstance(indata, basestring):
+    if isinstance(indata, str):
         return "'{}'".format(indata)
     if isinstance(indata, list):
         return "[" + ",".join(to_js(x) for x in indata) + "]"
@@ -143,7 +143,7 @@ class PyD3Plus(object):
             return data.to_json(orient='records')
         elif isinstance(data, list) and len(data) > 0 and type(data[0]) == dict:
             return json.dumps(data)
-        elif isinstance(data, basestring):
+        elif isinstance(data, str):
             return data
         else:
             raise ValueError("Cannot handle your input data")
@@ -507,7 +507,7 @@ class _GeoMap2(PyD3Plus):
         self.value = value
         self.text = text or self.id
         self.tooltip = tooltip or self.value
-        if isinstance(self.tooltip, basestring):
+        if isinstance(self.tooltip, str):
             self.tooltip = [self.tooltip]
         self.coords = coords or "http://d3plus.org/topojson/countries.json"
         self.title = title
