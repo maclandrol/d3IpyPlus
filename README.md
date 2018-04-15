@@ -51,6 +51,10 @@ print(scplot.dump_html(sample_data))
     <script src='http://www.d3plus.org/js/d3plus.js' type='text/javascript'></script>
     <div id='d3viz_1'></div>
     <style>
+	 div#d3viz_1{
+             width: 600px;
+             height: 400px;
+        }
         
     </style>
     <script>
