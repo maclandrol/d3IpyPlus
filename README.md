@@ -27,7 +27,7 @@ D3IpyPlus's plots are based on [D3plus](https://d3plus.org) which has a nice API
 Don't forget that this will only works in Ipython notebook.
 
 ```python
-from D3IpyPlus import ScatterPlot
+from d3IpyPlus import ScatterPlot
 
 sample_data = [
     {"value": 100, "weight": .45, "type": "alpha"},
